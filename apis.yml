@@ -1,0 +1,57 @@
+aid: schneider-electric-exchange
+name: Schneider Electric Exchange
+description: >-
+  Schneider Electric Exchange is a developer platform providing APIs for
+  EcoStruxure energy management, building automation, industrial IoT, and
+  commerce partner integrations. The Exchange platform enables partners and
+  developers to build integrations with Schneider Electric products and services.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Energy Management
+  - Building Automation
+  - Industrial IoT
+  - EcoStruxure
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/apis.yml
+created: '2026-03-16'
+modified: '2026-03-16'
+specificationVersion: '0.19'
+apis:
+  - aid: schneider-electric-exchange:ecostruxure-it-expert-api
+    name: EcoStruxure IT Expert API
+    description: >-
+      The EcoStruxure IT Expert API gives users a way to integrate EcoStruxure IT
+      into their own environments, with functionalities that allow users to
+      maintain a local data store or build applications that react to changes in
+      their critical infrastructure.
+    humanURL: https://devportal.exchange.se.com/
+    tags:
+      - Data Center
+      - Infrastructure Monitoring
+      - EcoStruxure IT
+    properties:
+      - type: Documentation
+        url: https://devportal.exchange.se.com/
+  - aid: schneider-electric-exchange:partner-apis
+    name: Schneider Electric Partner APIs
+    description: >-
+      Partner APIs providing real-time access to stock levels, pricing, order
+      status, and product availability across Schneider Electric warehouses
+      and distribution networks.
+    humanURL: https://api-explorer.se.com/en
+    tags:
+      - Commerce
+      - Partner Integration
+      - Inventory
+    properties:
+      - type: Documentation
+        url: https://api-explorer.se.com/en
+common:
+  - type: Portal
+    url: https://devportal.exchange.se.com/
+  - type: Website
+    url: https://exchange.se.com/develop
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
