@@ -8,10 +8,10 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Energy Management
   - Building Automation
-  - Industrial IoT
   - EcoStruxure
+  - Energy Management
+  - Industrial IoT
 url: >-
   https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/apis.yml
 created: '2026-03-16'
@@ -28,8 +28,8 @@ apis:
     humanURL: https://devportal.exchange.se.com/
     tags:
       - Data Center
-      - Infrastructure Monitoring
       - EcoStruxure IT
+      - Infrastructure Monitoring
     properties:
       - type: Documentation
         url: https://devportal.exchange.se.com/
@@ -42,8 +42,8 @@ apis:
     humanURL: https://api-explorer.se.com/en
     tags:
       - Commerce
-      - Partner Integration
       - Inventory
+      - Partner Integration
     properties:
       - type: Documentation
         url: https://api-explorer.se.com/en
