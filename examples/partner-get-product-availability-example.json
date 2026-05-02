@@ -1,0 +1,53 @@
+{
+  "title": "Get Product Availability",
+  "description": "Check product availability and delivery lead time for a Schneider Electric product using the Partner Product Availability API.",
+  "operation": "GET /availability/{reference}",
+  "baseUrl": "https://api-explorer.se.com",
+  "authentication": {
+    "type": "OAuth 2.0",
+    "flow": "client_credentials",
+    "tokenUrl": "https://api.se.com/oauth/token"
+  },
+  "request": {
+    "method": "GET",
+    "url": "https://api-explorer.se.com/v2/availability/A9F79299",
+    "headers": {
+      "Authorization": "Bearer {access_token}",
+      "Accept": "application/json"
+    },
+    "queryParameters": {
+      "deliveryAddressId": "addr_001",
+      "quantity": 10
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "commercialReference": "A9F79299",
+      "productName": "iCT 32A 2P 220-240V",
+      "requestedQuantity": 10,
+      "availability": [
+        {
+          "quantity": 10,
+          "availableDate": "2026-05-08",
+          "warehouse": "AMSTERDAM-EU",
+          "leadTimeDays": 6
+        },
+        {
+          "quantity": 5,
+          "availableDate": "2026-05-05",
+          "warehouse": "FRANKFURT-EU",
+          "leadTimeDays": 3
+        }
+      ],
+      "listPrice": {
+        "amount": 45.20,
+        "currency": "EUR",
+        "unit": "each"
+      }
+    }
+  }
+}

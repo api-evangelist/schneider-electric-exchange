@@ -1,0 +1,61 @@
+{
+  "title": "Get Devices from EcoStruxure IT Expert",
+  "description": "Retrieve a list of monitored devices from the EcoStruxure IT Expert API.",
+  "operation": "GET /devices",
+  "baseUrl": "https://api.ecostruxureit.com/rest",
+  "authentication": {
+    "type": "subscription_key",
+    "header": "Ocp-Apim-Subscription-Key",
+    "value": "YOUR_SUBSCRIPTION_KEY"
+  },
+  "request": {
+    "method": "GET",
+    "url": "https://api.ecostruxureit.com/rest/v1/devices",
+    "headers": {
+      "Ocp-Apim-Subscription-Key": "YOUR_SUBSCRIPTION_KEY",
+      "Accept": "application/json"
+    },
+    "queryParameters": {
+      "locationId": "loc_001",
+      "limit": 20,
+      "offset": 0
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": {
+      "data": [
+        {
+          "id": "device_001",
+          "name": "UPS-Rack-A1",
+          "type": "UPS",
+          "status": "normal",
+          "location": { "id": "loc_001", "name": "Server Room A" },
+          "ipAddress": "192.168.1.100",
+          "modelNumber": "APC Smart-UPS 3000",
+          "serialNumber": "AS2010120456",
+          "lastUpdated": "2026-05-02T14:00:00Z"
+        },
+        {
+          "id": "device_002",
+          "name": "PDU-Rack-A1",
+          "type": "PDU",
+          "status": "warning",
+          "location": { "id": "loc_001", "name": "Server Room A" },
+          "ipAddress": "192.168.1.101",
+          "modelNumber": "APC AP8853",
+          "serialNumber": "AS2009080123",
+          "lastUpdated": "2026-05-02T14:01:00Z"
+        }
+      ],
+      "pagination": {
+        "total": 42,
+        "limit": 20,
+        "offset": 0
+      }
+    }
+  }
+}

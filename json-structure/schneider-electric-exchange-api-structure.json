@@ -1,0 +1,83 @@
+{
+  "title": "Schneider Electric Exchange API Structure",
+  "description": "Document structure for the Schneider Electric Exchange developer platform APIs.",
+  "platforms": {
+    "EcoStruxure_APIs": {
+      "baseUrl": "https://api.ecostruxureit.com/rest/",
+      "description": "EcoStruxure IoT and energy management data APIs",
+      "authentication": {
+        "type": "Subscription Key",
+        "header": "Ocp-Apim-Subscription-Key",
+        "note": "Requires active EcoStruxure product subscription"
+      },
+      "apis": {
+        "IT_Expert": {
+          "description": "Data center infrastructure monitoring",
+          "resources": ["locations", "devices", "alarms", "sensors", "measurements"]
+        },
+        "Facility_Expert": {
+          "description": "Building management time series and alarms",
+          "resources": ["assets", "time-series", "alarms", "reports"]
+        },
+        "Energy_Contextualized_Data": {
+          "description": "Energy consumption and contextualized metrics",
+          "resources": ["energy-data", "consumption", "load-profiles"]
+        },
+        "Transformer_Expert": {
+          "description": "Transformer health and condition monitoring",
+          "resources": ["transformers", "health-indicators", "diagnostics"]
+        }
+      }
+    },
+    "Partner_Commerce_APIs": {
+      "baseUrl": "https://api-explorer.se.com",
+      "description": "B2B partner commerce APIs for distributors and resellers",
+      "authentication": {
+        "type": "OAuth 2.0",
+        "flow": "client_credentials",
+        "tokenUrl": "https://se.com/oauth/token",
+        "note": "Client ID and Secret requested from local SE contact"
+      },
+      "apis": {
+        "Product_Catalog": {
+          "description": "Comprehensive technical product data including ETIM 10.0",
+          "version": "v2",
+          "endpoints": ["GET /products/{reference}", "GET /products/search"]
+        },
+        "Product_Availability": {
+          "description": "Delivery lead time by product reference and address",
+          "version": "v2",
+          "endpoints": ["GET /availability/{reference}"]
+        },
+        "Net_Price": {
+          "description": "List and net price by account and product",
+          "endpoints": ["GET /price/{reference}"]
+        },
+        "Order_Status": {
+          "description": "Order status and shipment schedule",
+          "version": "v1.0",
+          "endpoints": ["GET /orders/{orderId}", "GET /orders"]
+        },
+        "Distributor_Quote": {
+          "description": "Quote lines for distributor accounts",
+          "version": "v1",
+          "endpoints": ["GET /quotes", "GET /quotes/{quoteId}/lines"]
+        },
+        "Installed_Product": {
+          "description": "Warranty dates by serial number",
+          "version": "v1.0",
+          "endpoints": ["GET /installed-products/{serialNumber}"]
+        },
+        "Digital_Asset": {
+          "description": "Product images, 3D models, datasheets",
+          "version": "v1",
+          "endpoints": ["GET /assets/{reference}"]
+        }
+      }
+    }
+  },
+  "developer_portals": {
+    "EcoStruxure": "https://devportal.exchange.se.com/",
+    "Partner_Commerce": "https://api-explorer.se.com/en"
+  }
+}

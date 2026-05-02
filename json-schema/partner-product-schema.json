@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api-explorer.se.com/schemas/product",
+  "title": "Schneider Electric Partner Product",
+  "description": "A Schneider Electric product record from the Partner Product Catalog API, including technical specifications, pricing, and availability data.",
+  "type": "object",
+  "properties": {
+    "commercialReference": {
+      "type": "string",
+      "description": "Schneider Electric commercial reference number (SKU) for the product."
+    },
+    "productName": {
+      "type": "string",
+      "description": "Display name of the product."
+    },
+    "description": {
+      "type": "string",
+      "description": "Technical description of the product."
+    },
+    "category": {
+      "type": "string",
+      "description": "Product category classification."
+    },
+    "range": {
+      "type": "string",
+      "description": "Product range or family name."
+    },
+    "etim": {
+      "type": "object",
+      "description": "ETIM 10.0 technical classification data.",
+      "properties": {
+        "classId": { "type": "string" },
+        "className": { "type": "string" },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "featureId": { "type": "string" },
+              "featureName": { "type": "string" },
+              "value": {},
+              "unit": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "listPrice": {
+      "$ref": "#/$defs/Price",
+      "description": "Public list price."
+    },
+    "netPrice": {
+      "$ref": "#/$defs/Price",
+      "description": "Partner-specific net price after discounts."
+    },
+    "availability": {
+      "type": "object",
+      "description": "Stock availability information.",
+      "properties": {
+        "stockLevel": { "type": "integer" },
+        "availableDate": { "type": "string", "format": "date" },
+        "warehouse": { "type": "string" }
+      }
+    },
+    "digitalAssets": {
+      "type": "object",
+      "description": "Product digital assets.",
+      "properties": {
+        "images": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        },
+        "datasheet": { "type": "string", "format": "uri" },
+        "model3d": { "type": "string", "format": "uri" }
+      }
+    }
+  },
+  "required": ["commercialReference", "productName"],
+  "$defs": {
+    "Price": {
+      "type": "object",
+      "properties": {
+        "amount": { "type": "number" },
+        "currency": { "type": "string" },
+        "unit": { "type": "string" }
+      }
+    }
+  }
+}

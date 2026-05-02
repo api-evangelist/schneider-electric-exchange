@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://api.ecostruxureit.com/schemas/device",
+  "title": "EcoStruxure IT Device",
+  "description": "A physical or virtual device discovered and monitored by EcoStruxure IT Expert, including UPS, PDU, CRAC, and other data center infrastructure equipment.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the device."
+    },
+    "name": {
+      "type": "string",
+      "description": "Display name of the device."
+    },
+    "type": {
+      "type": "string",
+      "description": "Device type classification (e.g., UPS, PDU, CRAC, Server, Network)."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["normal", "warning", "critical", "unknown"],
+      "description": "Current operational status of the device."
+    },
+    "location": {
+      "$ref": "#/$defs/LocationRef",
+      "description": "The location where this device is installed."
+    },
+    "ipAddress": {
+      "type": "string",
+      "description": "IP address of the device."
+    },
+    "macAddress": {
+      "type": "string",
+      "description": "MAC address of the device."
+    },
+    "firmwareVersion": {
+      "type": "string",
+      "description": "Firmware version installed on the device."
+    },
+    "serialNumber": {
+      "type": "string",
+      "description": "Manufacturer serial number."
+    },
+    "modelNumber": {
+      "type": "string",
+      "description": "Manufacturer model number."
+    },
+    "sensors": {
+      "type": "array",
+      "description": "Sensors attached to or reported by this device.",
+      "items": { "$ref": "#/$defs/SensorRef" }
+    },
+    "alarms": {
+      "type": "array",
+      "description": "Active alarms for this device.",
+      "items": { "$ref": "#/$defs/AlarmRef" }
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp of the most recent data update from this device."
+    }
+  },
+  "required": ["id", "name", "type"],
+  "$defs": {
+    "LocationRef": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    },
+    "SensorRef": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "label": { "type": "string" },
+        "unit": { "type": "string" }
+      }
+    },
+    "AlarmRef": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "severity": { "type": "string", "enum": ["critical", "warning", "info"] },
+        "description": { "type": "string" }
+      }
+    }
+  }
+}

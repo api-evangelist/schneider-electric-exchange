@@ -1,0 +1,70 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "se": "https://exchange.se.com/vocab#",
+    "ecostruxure": "https://ecostruxure.se.com/vocab#",
+    "iotlit": "http://iotschema.org/",
+
+    "EcoStruxureAPI": "ecostruxure:EcoStruxureAPI",
+    "DataCenterDevice": "ecostruxure:DataCenterDevice",
+    "EnergyMeasurement": "ecostruxure:EnergyMeasurement",
+    "BuildingAsset": "ecostruxure:BuildingAsset",
+    "IndustrialAsset": "ecostruxure:IndustrialAsset",
+    "PartnerAPI": "se:PartnerAPI",
+    "ProductCatalog": "se:ProductCatalog",
+    "PartnerOrder": "se:Order",
+    "PartnerQuote": "se:Quote",
+
+    "name": "schema:name",
+    "description": "schema:description",
+    "url": "schema:url",
+    "identifier": "schema:identifier",
+    "serialNumber": "schema:serialNumber",
+    "manufacturer": "schema:manufacturer",
+    "model": "schema:model",
+    "dateCreated": "schema:dateCreated",
+    "dateModified": "schema:dateModified",
+
+    "hasDevice": {
+      "@id": "ecostruxure:hasDevice",
+      "@type": "@id"
+    },
+    "hasSensor": {
+      "@id": "iotlit:hasSensor",
+      "@type": "@id"
+    },
+    "hasAlarm": {
+      "@id": "ecostruxure:hasAlarm",
+      "@type": "@id"
+    },
+    "measurementValue": "schema:value",
+    "measurementUnit": "schema:unitCode",
+    "alarmSeverity": "ecostruxure:alarmSeverity",
+    "deviceStatus": "ecostruxure:deviceStatus",
+    "energyConsumption": "schema:energy",
+    "commercialReference": "se:commercialReference",
+    "listPrice": "schema:price",
+    "netPrice": "se:netPrice",
+    "warrantyStartDate": "schema:purchaseDate",
+    "warrantyEndDate": "schema:expires",
+
+    "Place": "schema:Place",
+    "Product": "schema:Product",
+    "Organization": "schema:Organization",
+    "SoftwareApplication": "schema:SoftwareApplication"
+  },
+  "@graph": [
+    {
+      "@id": "https://exchange.se.com/",
+      "@type": ["Organization", "SoftwareApplication"],
+      "name": "Schneider Electric Exchange",
+      "description": "Developer platform providing EcoStruxure energy management and partner commerce APIs for Schneider Electric integrations.",
+      "url": "https://exchange.se.com/",
+      "manufacturer": {
+        "@id": "https://www.se.com/",
+        "@type": "Organization",
+        "name": "Schneider Electric"
+      }
+    }
+  ]
+}
