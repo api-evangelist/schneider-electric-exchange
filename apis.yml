@@ -43,6 +43,9 @@ apis:
         url: https://community.se.com/t5/EcoStruxure-IT-Expert-API/tkb-p/ecostruxure-it-expert-api
       - type: API Reference
         url: https://api.ecostruxureit.com/rest/
+      - type: JSONSchema
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/json-schema/ecostruxure-it-device-schema.json
   - aid: schneider-electric-exchange:ecostruxure-facility-expert-api
     name: EcoStruxure Facility Expert Data API
     description: >-
@@ -103,6 +106,9 @@ apis:
     properties:
       - type: Documentation
         url: https://api-explorer.se.com/en/api/product-catalog-v2
+      - type: JSONSchema
+        url: >-
+          https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/json-schema/partner-product-schema.json
   - aid: schneider-electric-exchange:partner-product-availability-api
     name: Partner Product Availability API
     description: >-
@@ -201,6 +207,18 @@ common:
     url: https://exchange.se.com/develop
   - type: LinkedIn
     url: https://www.linkedin.com/showcase/schneider-electric-exchange/
+  - type: JSONStructure
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/json-structure/schneider-electric-exchange-api-structure.json
+  - type: JSONLd
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/json-ld/schneider-electric-exchange-context.jsonld
+  - type: Vocabulary
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/vocabulary/schneider-electric-exchange-vocabulary.yml
+  - type: Examples
+    url: >-
+      https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/examples/ecostruxure-it-get-devices-example.json
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
