@@ -1,0 +1,218 @@
+specification: FinOps Framework
+specificationVersion: '1.0'
+alignedWith:
+  framework: FinOps Foundation Framework
+  frameworkUrl: https://www.finops.org/framework/
+  dataSpec: FOCUS
+  dataSpecVersion: '1.3'
+  dataSpecUrl: https://focus.finops.org/focus-specification/v1-3/
+provider: Schneider Electric Exchange
+providerId: schneider-electric-exchange
+publisherName: Schneider Electric Exchange
+serviceCategory: API
+created: '2026-05-04'
+modified: '2026-05-04'
+tags:
+  - Building Automation
+  - Commerce APIs
+  - EcoStruxure
+  - Energy Management
+  - Industrial IoT
+  - Schneider Electric
+  - FinOps
+  - Cost Management
+  - FOCUS
+description: FinOps framework definition for the Schneider Electric Exchange API surface. Provides a FOCUS-aligned
+  mapping for cost allocation, usage measurement, and unit-economics reporting across the provider's APIs.
+principles:
+  - name: Visibility
+    description: Make API consumption costs visible to engineering, product, and finance teams in near
+      real-time.
+  - name: Allocation
+    description: Tag every chargeable API call with the consuming team, environment, application, and
+      feature so cost can be allocated.
+  - name: Optimization
+    description: Continuously evaluate request patterns, caching, batching, and tier selection to reduce
+      cost per useful unit of work.
+  - name: Accountability
+    description: Establish budget owners and chargeback or showback flows for each consuming team.
+domains:
+  - name: Understand Usage and Cost
+    capabilities:
+      - Data Ingestion
+      - Allocation
+      - Reporting and Analytics
+      - Anomaly Management
+  - name: Quantify Business Value
+    capabilities:
+      - Planning and Estimating
+      - Forecasting
+      - Budgeting
+      - Benchmarking
+      - Unit Economics
+  - name: Optimize Usage and Cost
+    capabilities:
+      - Architecting for Cloud
+      - Rate Optimization
+      - Workload Optimization
+      - Cloud Sustainability
+      - Licensing and SaaS
+  - name: Manage the FinOps Practice
+    capabilities:
+      - FinOps Practice Operations
+      - FinOps Education and Enablement
+      - Invoicing and Chargeback
+      - Onboarding Workloads
+      - Intersecting Disciplines
+billingModel:
+  pricingCategory: Usage-Based
+  billingFrequency: Monthly
+  billingCurrency: USD
+  chargeCategories:
+    - Usage
+    - Purchase
+    - Tax
+    - Credit
+    - Adjustment
+  chargeFrequency: Recurring
+focusColumns:
+  ServiceName: Schneider Electric Exchange
+  ServiceCategory: Developer Tools / API
+  ProviderName: Schneider Electric Exchange
+  PublisherName: Schneider Electric Exchange
+  InvoiceIssuerName: Schneider Electric Exchange
+  PricingCategory: Usage-Based
+  PricingUnit: request
+  BillingCurrency: USD
+  ChargeCategory: Usage
+meters:
+  - name: api_requests
+    description: Count of billable API requests
+    unit: request
+    aggregation: sum
+    dimensions:
+      - api
+      - endpoint
+      - tier
+      - region
+      - consumer
+  - name: data_egress
+    description: Bytes returned over the network in API responses
+    unit: GB
+    aggregation: sum
+    dimensions:
+      - api
+      - region
+      - consumer
+  - name: compute_seconds
+    description: Server-side compute consumed by the request, where applicable
+    unit: second
+    aggregation: sum
+    dimensions:
+      - api
+      - endpoint
+      - tier
+apis:
+  - name: EcoStruxure IT Expert API
+    baseURL: ''
+    tags:
+      - Data Center
+      - EcoStruxure IT
+      - Infrastructure Monitoring
+      - IoT
+    serviceName: EcoStruxure IT Expert API
+    serviceCategory: API
+  - name: EcoStruxure Facility Expert Data API
+    baseURL: ''
+    tags:
+      - Building Automation
+      - EcoStruxure
+      - Facility Management
+      - Time Series
+    serviceName: EcoStruxure Facility Expert Data API
+    serviceCategory: API
+  - name: EcoStruxure Energy Contextualized Data API
+    baseURL: ''
+    tags:
+      - EcoStruxure
+      - Energy Management
+      - Energy Monitoring
+      - Sustainability
+    serviceName: EcoStruxure Energy Contextualized Data API
+    serviceCategory: API
+  - name: EcoStruxure Transformer Expert Data API
+    baseURL: ''
+    tags:
+      - Asset Management
+      - EcoStruxure
+      - Industrial IoT
+      - Predictive Maintenance
+    serviceName: EcoStruxure Transformer Expert Data API
+    serviceCategory: API
+  - name: Partner Product Catalog API
+    baseURL: ''
+    tags:
+      - Commerce
+      - Partner Integration
+      - Product Catalog
+    serviceName: Partner Product Catalog API
+    serviceCategory: API
+  - name: Partner Product Availability API
+    baseURL: ''
+    tags:
+      - Commerce
+      - Inventory
+      - Partner Integration
+      - Supply Chain
+    serviceName: Partner Product Availability API
+    serviceCategory: API
+  - name: Partner Net Price API
+    baseURL: ''
+    tags:
+      - Commerce
+      - Partner Integration
+      - Pricing
+    serviceName: Partner Net Price API
+    serviceCategory: API
+  - name: Partner Order Status API
+    baseURL: ''
+    tags:
+      - Commerce
+      - Order Management
+      - Partner Integration
+    serviceName: Partner Order Status API
+    serviceCategory: API
+  - name: Partner Distributor Quote API
+    baseURL: ''
+    tags:
+      - Commerce
+      - Partner Integration
+      - Quotes
+    serviceName: Partner Distributor Quote API
+    serviceCategory: API
+  - name: Partner Installed Product API
+    baseURL: ''
+    tags:
+      - Asset Management
+      - Partner Integration
+      - Warranty
+    serviceName: Partner Installed Product API
+    serviceCategory: API
+  - name: Partner Product Digital Asset API
+    baseURL: ''
+    tags:
+      - Commerce
+      - Digital Assets
+      - Partner Integration
+    serviceName: Partner Product Digital Asset API
+    serviceCategory: API
+unitEconomics:
+  - name: Cost per 1K Requests
+    metric: billed_cost / (api_requests / 1000)
+    target: TBD
+  - name: Cost per Active Consumer
+    metric: billed_cost / active_consumers
+    target: TBD
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
