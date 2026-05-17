@@ -41,7 +41,7 @@ apis:
     properties:
       - type: Documentation
         url: https://community.se.com/t5/EcoStruxure-IT-Expert-API/tkb-p/ecostruxure-it-expert-api
-      - type: API Reference
+      - type: APIReference
         url: https://api.ecostruxureit.com/rest/
       - type: JSONSchema
         url: >-
@@ -210,7 +210,7 @@ common:
   - type: JSONStructure
     url: >-
       https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/json-structure/schneider-electric-exchange-api-structure.json
-  - type: JSONLd
+  - type: JSONLD
     url: >-
       https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/json-ld/schneider-electric-exchange-context.jsonld
   - type: Vocabulary
