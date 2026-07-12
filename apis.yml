@@ -195,6 +195,8 @@ apis:
       - type: Documentation
         url: https://api-explorer.se.com/en/api/product-digital-asset-v1
 common:
+  - type: DomainSecurity
+    url: security/schneider-electric-exchange-domain-security.yml
   - type: Portal
     url: https://devportal.exchange.se.com/
   - type: Website
