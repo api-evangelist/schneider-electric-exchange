@@ -35,7 +35,7 @@ url: >-
   https://raw.githubusercontent.com/api-evangelist/schneider-electric-exchange/refs/heads/main/apis.yml
 created: '2026-03-16'
 modified: '2026-05-02'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
   - aid: schneider-electric-exchange:ecostruxure-it-expert-api
     name: EcoStruxure IT Expert API
