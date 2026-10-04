@@ -57,7 +57,7 @@ apis:
       platform. Requires an active IT Expert subscription.
     humanURL: https://community.se.com/t5/EcoStruxure-IT-Expert-API/tkb-p/ecostruxure-it-expert-api
     tags:
-      - Data-Center
+      - Data Center
       - EcoStruxure IT
       - Infrastructure Monitoring
       - IoT
@@ -66,6 +66,7 @@ apis:
       - EcoStruxure IT
       - Infrastructure Monitoring
       - IoT
+      - Data-Center
     properties:
       - type: Documentation
         url: https://community.se.com/t5/EcoStruxure-IT-Expert-API/tkb-p/ecostruxure-it-expert-api
