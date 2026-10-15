@@ -15,3 +15,37 @@
   relationship: distribution-channel
   status: not-a-workflow
   arazzo: null
+- slug: schneider-electric-exchange-odva-cip-ethernet-ip
+  label: ODVA (CIP / EtherNet/IP)
+  partner_name: ODVA (CIP / EtherNet/IP)
+  category: CIP network products
+  type: register
+  channel: standard-directory
+  evidence: https://marketplace.odva.org/organizations/172-schneider-electric
+  source: edge
+  relationship: standard-participant
+  contract_reference:
+    register: ODVA Marketplace (marketplace.odva.org/organizations)
+    spec_file: null
+    standard: CIP (EtherNet/IP, DeviceNet, ControlNet, CompoNet)
+    role: ODVA conformance-declared vendor
+    registered_name: Schneider Electric
+    website: http://www.se.com
+    matched_domain: se.com
+    matched_by: domain
+    licensed_technologies:
+    - DeviceNet
+    - EtherNet/IP
+    certified_products:
+    - product: EtherNet/IP
+      listed_products: 45
+      lapsed: false
+    - product: DeviceNet
+      listed_products: 8
+      lapsed: false
+    signal_note: certified_products = one entry per TECHNOLOGY with a listed (Declaration of Conformity) product;
+      listed_products is context, never read
+    detected_by: sweep-industrial-robotics.py
+    detected: '2026-10-15'
+  status: not-a-workflow
+  arazzo: null
