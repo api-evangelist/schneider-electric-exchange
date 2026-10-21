@@ -8,6 +8,12 @@ checked:
 - https://repo.ros2.org/rosdistro_cache/jazzy-cache.yaml.gz
 - https://repo.ros2.org/rosdistro_cache/kilted-cache.yaml.gz
 - https://repo.ros2.org/rosdistro_cache/rolling-cache.yaml.gz
+- https://carbonaccountingfinancials.com/en/signatories
+- https://files.sciencebasedtargets.org/production/files/companies-excel.xlsx
+- https://ghgprotocol.org/built-ghg-protocol
+- https://ghgprotocol.org/tools-built-ghg-protocol
+- https://sciencebasedtargets.org/target-dashboard
+- https://www.cdp.net/en/find-accredited-solutions-providers
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -84,6 +90,41 @@ edges:
     detected: '2026-10-15'
   detected_by: sweep-industrial-robotics.py
   first_seen: '2026-10-15'
+- partner_name: CDP (Accredited Solutions Provider programme)
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.cdp.net/en/partners/schneider-electric
+  category: CDP disclosure accredited solutions provider
+  contract_reference:
+    register: CDP Accredited Solutions Providers (cdp.net/en/find-accredited-solutions-providers + partner pages)
+    standard: CDP disclosure (CDP Accredited Solutions Provider programme)
+    spec_file: null
+    role: cdp-accredited-solutions-provider
+    registered_name: Schneider Electric
+    register_id: https://www.cdp.net/en/partners/schneider-electric
+    partner_tier: gold
+    register_statement: A global gold, software, consultancy and verification solutions provider
+    matched_domain: se.com
+    matched_by: domain
+    matched_via: contact-email domain on the ASP page (the page links no website)
+    certified_products:
+    - product: CDP Accredited Solutions Provider (consultancy)
+      product_type: CDP ASP consultancy
+      lapsed: false
+    - product: CDP Accredited Solutions Provider (software)
+      product_type: CDP ASP software
+      lapsed: false
+    signal_note: certified_products = one entry per accredited service type (software / consultancy / renewable
+      energy), never per product; partner_tier is the CDP accreditation level; verification ASPs are assessors and
+      are held
+    detected_by: sweep-carbon-accounting-sbti-pcaf.py
+    detected: '2026-10-21'
+  detected_by: sweep-carbon-accounting-sbti-pcaf.py
+  first_seen: '2026-10-21'
 source:
 - https://opcfoundation.org/products/
 - https://marketplace.odva.org/organizations
