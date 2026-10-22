@@ -14,6 +14,9 @@ checked:
 - https://ghgprotocol.org/tools-built-ghg-protocol
 - https://sciencebasedtargets.org/target-dashboard
 - https://www.cdp.net/en/find-accredited-solutions-providers
+- https://data.energystar.gov/api/views/metadata/v1
+- https://data.energystar.gov/resource/8wj2-sec8.json
+- https://www.energystar.gov/productfinder/
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -125,6 +128,56 @@ edges:
     detected: '2026-10-21'
   detected_by: sweep-carbon-accounting-sbti-pcaf.py
   first_seen: '2026-10-21'
+- partner_name: US EPA ENERGY STAR
+  partner: null
+  partner_match: register
+  type: register
+  channel: standard-directory
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://data.energystar.gov/d/8wj2-sec8
+  category: ENERGY STAR product certification
+  contract_reference:
+    register: ENERGY STAR Model Index, all currently certified models (data.energystar.gov/resource/8wj2-sec8)
+    standard: ENERGY STAR (US EPA product specifications)
+    spec_file: null
+    role: energy-star-partner
+    registered_name: Schneider Electric
+    register_id: https://data.energystar.gov/d/8wj2-sec8
+    matched_domain: se.com
+    matched_by: domain
+    certified_products:
+    - product: Electric Vehicle Supply Equipment
+      product_type: Electric Vehicle Supply Equipment
+      lapsed: false
+      brands:
+      - Schneider
+      first_certified: '2025-03-28'
+      connected: true
+      connected_protocols:
+      - Cellular
+      - Other LAN (Local Area Network)
+      - Wi-Fi or Gigabit Ethernet
+    - product: Uninterruptible Power Supplies
+      product_type: Uninterruptible Power Supplies
+      lapsed: false
+      brands:
+      - APC by Schneider Electric
+      - Schneider Electric
+      first_certified: '2018-07-16'
+    connected_product_types:
+    - Electric Vehicle Supply Equipment
+    signal_note: 'certified_products = ONE entry per ENERGY STAR product category with a currently certified model
+      (the Model Index lists current certifications only, so lapsed is False; delisted models drop out); connected:
+      true where the category''s dataset flags connected / network capability for this partner''s models (Smart
+      Thermostats and Connected lighting are connected by definition). Brands are context; model counts are never
+      counted.'
+    detected_by: sweep-energy-star-certified-products.py
+    detected: '2026-10-22'
+    identity: wikidata Q49053 'Schneider Electric' P856 https://www.se.com
+    identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
+  detected_by: sweep-energy-star-certified-products.py
+  first_seen: '2026-10-22'
 source:
 - https://opcfoundation.org/products/
 - https://marketplace.odva.org/organizations
