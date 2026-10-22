@@ -17,6 +17,9 @@ checked:
 - https://data.energystar.gov/api/views/metadata/v1
 - https://data.energystar.gov/resource/8wj2-sec8.json
 - https://www.energystar.gov/productfinder/
+- https://landscape.lfenergy.org
+- https://lfenergy.org/projects/
+- https://raw.githubusercontent.com/lf-energy/lfenergy-landscape/1364cff4a6379fe8e87568eb5134fd6e8b4ded8e/landscape.yml
 marketplace_apps: []
 edges:
 - partner_name: Microsoft Azure Marketplace
@@ -177,6 +180,66 @@ edges:
     identity: wikidata Q49053 'Schneider Electric' P856 https://www.se.com
     identity_source: wikidata P856 (labelled provenance step; Kin 2026-10-15 decision 1)
   detected_by: sweep-energy-star-certified-products.py
+  first_seen: '2026-10-22'
+- partner_name: LF Energy (membership / landscape)
+  partner: lf-energy
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: LF Energy landscape listing
+  evidence: https://github.com/lf-energy/lfenergy-landscape/blob/1364cff4a6379fe8e87568eb5134fd6e8b4ded8e/landscape.yml
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: LF Energy Landscape (github.com/lf-energy/lfenergy-landscape landscape.yml @1364cff4a6)
+    spec_file: null
+    standard: LF Energy
+    role: landscape-listed
+    registered_name: EcoStruxure
+    registered_names:
+    - EcoStruxure
+    website: https://www.se.com/ca/en/work/solutions/software/
+    matched_domain: se.com
+    matched_by: domain
+    landscape_categories:
+    - Acquisition and Control / Central Hub
+    landscape_entries: 1
+    signal_note: 'participation only: LF Energy membership / a landscape listing is standard-participant evidence,
+      not depth. Tier, entries and categories are CONTEXT, never counted'
+    detected_by: sweep-lf-energy-projects.py
+    detected: '2026-10-22'
+  detected_by: sweep-lf-energy-projects.py
+  first_seen: '2026-10-22'
+- partner_name: LF Energy projects (contributor)
+  partner: lf-energy
+  partner_match: register
+  type: register
+  direction: partner-built
+  category: LF Energy project contribution
+  evidence: https://lfenergy.org/projects/seapath/
+  channel: standard-directory
+  relationship: standard-participant
+  contract_reference:
+    register: LF Energy project pages (lfenergy.org/projects/)
+    spec_file: null
+    standard: LF Energy
+    role: lfe-project-contributor
+    registered_name: Schneider Electric
+    registered_names:
+    - Schneider Electric
+    matched_domain: se.com
+    matched_by: domain
+    lfe_projects:
+    - project: SEAPATH – LF Energy
+      stage: null
+      evidence_url: https://lfenergy.org/projects/seapath/
+      as:
+      - logo
+    signal_note: 'participation only: named by an LF Energy project page as initiator / TSC / contributing organisation;
+      projects and stages are CONTEXT, never counted'
+    detected_by: sweep-lf-energy-projects.py
+    detected: '2026-10-22'
+  detected_by: sweep-lf-energy-projects.py
   first_seen: '2026-10-22'
 source:
 - https://opcfoundation.org/products/
